@@ -1,0 +1,29 @@
+/* Lightbox arka planı */
+.lb-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Yarı saydam siyah arka plan */
+    z-index: 9998; /* Lightbox'tan önce görüntülenir */
+  }
+  
+  /* Lightbox penceresi */
+  .lb-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    z-index: 9999; /* Arka planın üzerinde görüntülenir */
+    animation: lb-in 0.5s ease-out forwards; /* Açılırken animasyon */
+  }
+  
+  @keyframes lb-in {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+  }
+  

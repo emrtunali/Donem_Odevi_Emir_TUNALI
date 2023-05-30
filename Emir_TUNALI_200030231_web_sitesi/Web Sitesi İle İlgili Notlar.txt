@@ -1,0 +1,13 @@
+Web Sitesi İle İlgili Notlar
+MBP 106 WEB Uygulamaları Projem şunları içerir. 
+1-Footer kısmına kayan yazı ,neon yazı ve telif hakkı işareti ekledim ekledim.
+2-Hizmetler kısmına Mouse ile üzerine yaklaşınca aşağı doğru (slide-down) diğer hizmetlerin olduğu bir menu açılır.
+3-Havayolu Taşımacılığına tıklandığında sayfanın adının yazdığı yerde uçak animasyonu bulunur kodları plane.css de ve plane.htmlde bulunur. 4-Sayfanın açılışında yükleme animasyonu kullandım owl-carousel kısmında kodlaro bulunmaktadır.
+5-İletişim bölümünün mesaj kısmında kullanıcın girdiği kelimeleri tek tek saymaktadır.
+6-150 Kelime sınırına ulaşınca kırmızı renkte uyarı verir.
+7-Fotoğraflar kısmına Lightbox ekledim.
+8-Web Sitesini mobil uyumulu ve responsive bir şekilde yaptım.
+9-javascript ve jquery kullanarak yapıldı.
+10-Bootstrap kullanılarak sayfaların tasarımını düzenledim.11-Yazılar için Fonts eklentisi kullanıldı.
+12-Butonlara fare imleci üzerinine gelince renk değiştiren özellik ekledim.
+13- Bütün özelliklerin açıklamaları her kod sayfasının en üst kısmında ne için kullanıldığı anlatan açıklamalar yapılmıştır. 

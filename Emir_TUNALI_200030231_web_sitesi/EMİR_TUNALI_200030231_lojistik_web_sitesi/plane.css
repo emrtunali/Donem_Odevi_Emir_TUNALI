@@ -1,0 +1,50 @@
+body {
+  background-color: #fff;
+  margin: 0;
+ 
+}
+
+header {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud {
+  position: absolute;
+  top: 80px;
+  right: -500px;
+  opacity: .8;
+  animation: cloud 10s linear 0s infinite reverse;
+  z-index: 0;
+}
+
+.light {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  bottom: calc(295px - 80px);
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  animation: light 800ms ease-in-out 0s infinite alternate;
+}
+.light im{
+  z-index: -1;
+}
+
+@keyframes light {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes cloud {
+  from {right:-500px;}
+  to {right: 102%;}
+}
+
+main {
+  background-color: skyblue;
+  padding: 20px;
+}

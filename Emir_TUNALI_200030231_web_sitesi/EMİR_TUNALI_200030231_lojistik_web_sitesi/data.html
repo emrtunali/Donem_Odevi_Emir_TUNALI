@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EMİR TUNALI veri-cek-gonder-aciklama</title>
+    <meta name="description" content="EMİR TUNALI - Döenm Projesi">
+   
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js"></script>
+
+    <style>
+        div{
+            display: inline;
+        }
+    </style>
+</head>
+<body style="padding: 3rem;">
+
+  <form>
+      <label>Adınız : </label><br>
+      <input type="text" id="form-adiniz" name="form-adiniz"><br>
+
+      <label>Soyadınız : </label><br>
+      <input type="text" id="form-soyadiniz" name="form-soyadiniz"><br>
+
+      <label>Okul Numaranız : </label><br>
+      <input type="text" id="form-okul-numaraniz" name="form-okul-numaraniz"><br><br>
+
+      <input type="submit" id="veri-gonder" value="Veri Gönder" style="padding: 5px;">
+      <input type="button" id="veri-cek" value="Veri Çek" style="padding: 5px;">
+  </form>
+
+  <img src="itu-logo.png" alt="" style="width: 250px; margin-top: 50px;"> <br><br><br>
+
+  <label>Adınız : </label>
+  <div id="cekilen-adiniz"></div> <br><br>
+
+  <label>Soyadınız : </label>
+  <div id="cekilen-soyadiniz"></div> <br><br>
+
+  <label>Okul Numaranız : </label>
+  <div id="cekilen-okul-numaraniz"></div> <br><br>
+
+  <label>Bölümünüz : Bilgisayar Programcılığı</label> <br><br><br>
+
+  <p id="veri-cek-gonder-aciklama"><b>Açıklama :</b>  MBP 106 WEB Uygulamaları Projem şunları içerir. 1-Footer kısmına kayan yazı ,neon yazı ve telif hakkı işareti ekledim ekledim.2-Hizmetler kısmına Mouse ile üzerine yaklaşınca aşağı doğru (slide-down) diğer hizmetlerin olduğu bir menu açılır. 
+   3-Havayolu Taşımacılığına tıklandığında sayfanın adının yazdığı yerde uçak animasyonu bulunur kodları plane.css de ve plane.htmlde bulunur. 4-Sayfanın açılışında yükleme animasyonu kullandım owl-carousel kısmında kodlaro bulunmaktadır.
+  5-İletişim bölümünün mesaj kısmında kullanıcın girdiği kelimeleri tek tek saymaktadır.6-150 Kelime sınırına ulaşınca kırmızı renkte uyarı verir. 7-Fotoğraflar kısmına Lightbox ekledim.
+  8-Web Sitesini mobil uyumulu ve responsive bir şekilde yaptım.9-javascript ve jquery kullanarak yapıldı. 10-Bootstrap kullanılarak sayfaların tasarımını düzenledim.11-Yazılar için Fonts eklentisi kullanıldı.
+  12-Butonlara fare imleci üzerinine gelince renk değiştiren özellik ekledim.13- Bütün özelliklerin açıklamaları her kod sayfasının en üst kısmında ne için kullanıldığı anlatan açıklamalar yapılmıştır. 
+ </p>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  var ad = "";
+  var soyad = "";
+  var okulno = "";
+
+  $(document).ready(function() {
+    $("#form-adiniz").change(function() {
+      ad = $(this).val();
+    });
+    $("#form-soyadiniz").change(function() {
+      soyad = $(this).val();
+    });
+    $("#form-okul-numaraniz").change(function() {
+      okulno = $(this).val();
+    });
+
+    $("#veri-gonder").click(function(event) {
+      event.preventDefault();
+      localStorage.setItem("ad", ad);
+      localStorage.setItem("soyad", soyad);
+      localStorage.setItem("okulno", okulno);
+      alert("Veriler başarıyla kaydedildi.");
+    });
+
+    $("#veri-cek").click(function(event) {
+      event.preventDefault();
+      var ad = localStorage.getItem("ad");
+      var soyad = localStorage.getItem("soyad");
+      var okulno = localStorage.getItem("okulno");
+      if (!ad || !soyad || !okulno) {
+        alert("Kaydedilmiş veri yok.");
+        return;
+      }
+      document.getElementById("cekilen-adiniz").innerHTML = ad;
+      document.getElementById("cekilen-soyadiniz").innerHTML = soyad;
+      document.getElementById("cekilen-okul-numaraniz").innerHTML = okulno;
+    });
+  });
+</script>
+
+</body>
+
+  
+</body>
